@@ -34,14 +34,14 @@ function getData() {
         li.textContent = apps[i];
 
         li.style.border = "1px solid #101010";
-        li.style.margin = "1rem";
-        li.style.width = `${360 / 2}px`;
+        li.style.margin = "0.3rem";
+        li.style.width = `${880 / 2}px`;
         li.style.textAlign = "center";
         ul.appendChild(li);
-
-        const date = document.getElementById("date");
-        date.textContent = app.getExperience();
       }
+
+      const date = document.getElementById("date");
+      date.textContent = app.getExperience();
     });
   });
 }
