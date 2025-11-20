@@ -38,6 +38,9 @@ function getData() {
         li.style.width = `${360 / 2}px`;
         li.style.textAlign = "center";
         ul.appendChild(li);
+
+        const date = document.getElementById("date");
+        date.textContent = app.getExperience();
       }
     });
   });
