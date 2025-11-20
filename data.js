@@ -40,9 +40,6 @@ function getData() {
         const li1 = document.createElement("li");
         list.appendChild(li1);
         li1.textContent = apps[i];
-
-        const date = document.getElementById("date");
-        date.textContent = app.getExperience();
       }
 
       for (let i = 0; i < apps.length; i++) {
@@ -64,6 +61,10 @@ function getData() {
             li.style.border = "3px solid #101010";
           });
 
+          img.style.height = 250 + "px";
+          im.style.borderRadius = "50%";
+          img.style.border = "3px solid #ccc";
+
           if (wrapper.style.display === "none") {
             li.style.display = "flex";
             wrapper.style.display = "block";
@@ -75,6 +76,9 @@ function getData() {
             e.preventDefault();
             li.textContent = apps[i];
           });
+
+          // const closeButton = document.getElementById("close");
+          // closeButton.addEventListener("click", () => {});
         });
       }
     });
