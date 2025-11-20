@@ -31,17 +31,25 @@ function getData() {
       for (let i = 0; i < apps.length; i++) {
         const li = document.createElement("li");
 
-        li.textContent = apps[i];
-
         li.style.border = "1px solid #101010";
         li.style.margin = "0.3rem";
         li.style.width = `${880 / 2}px`;
         li.style.textAlign = "center";
-        ul.appendChild(li);
-      }
 
-      const date = document.getElementById("date");
-      date.textContent = app.getExperience();
+        if (app.getIKnow()[0] == "React") {
+          const date = document.getElementById("date");
+
+          document.querySelectorAll("#img").forEach((e) => {
+            ul.appendChild(li);
+            e.addEventListener("click", () => {
+              li.textContent = apps[i];
+              li.addEventListener("click", () => {
+                li.style.backgroundColor = "red";
+              });
+            });
+          });
+        }
+      }
     });
   });
 }
