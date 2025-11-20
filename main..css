@@ -27,10 +27,32 @@ li {
   width: 500px;
 }
 
-.wrapper {
+#wrapper {
   display: flex;
   justify-content: center;
   font-family: sans-serif;
+  display: none;
+  position: relative;
+  top: 100px;
+}
+
+#listsDesktop {
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  font-family: sans-serif;
+  /* display: none; */
+  position: relative;
+  top: 470px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: 700;
+}
+
+img {
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
 }
 
 li {
@@ -42,7 +64,7 @@ li {
   position: relative;
   top: calc(75px * 2);
   /* padding-right: 40px; */
-  color: white;
+  /* color: white; */
 }
 
 header {
@@ -50,7 +72,22 @@ header {
   background-color: #101010;
 }
 
-h2 {
+#projects {
+  text-align: center;
+  font-size: calc(37px / 2);
+  letter-spacing: 0px;
+  position: relative;
+  top: 70px;
+  font-family: sans-serif;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#date {
   text-align: center;
   font-size: calc(40px / 2);
   letter-spacing: 0px;
@@ -63,6 +100,12 @@ a {
   display: block;
 }
 
+button {
+  width: calc(900px / 2);
+  position: relative;
+  top: calc(35px * 10);
+}
+
 @media screen and (max-width: 1200px) {
   li {
     display: inline;
@@ -72,7 +115,29 @@ a {
     top: calc(75px * 2);
     padding-right: 20px;
     /* background-color: white; */
-    color: white;
+    color: red;
+  }
+
+  #listsDesktop {
+    display: none;
+  }
+
+  #wrapper {
+    display: flex;
+  }
+  /* #projects {
+    text-align: center;
+    font-size: calc(40px / 2);
+    letter-spacing: 0px;
+    position: relative;
+    top: 100px;
+    font-family: sans-serif;
+  } */
+
+  button {
+    width: 200px;
+    position: relative;
+    top: calc(295px * 2);
   }
 }
 
@@ -82,10 +147,11 @@ a {
     /* max-width: 500px; */
     display: flex;
     color: white;
-
+    justify-content: center;
     position: relative;
     top: calc(75px * 2);
-    padding-right: 40px;
-    background-color: white;
+    /* padding-right: 40px; */
+    color: red;
+    margin: 20px auto;
   }
 }
