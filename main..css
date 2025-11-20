@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding:10px;
+    border: 2px solid #202020;
+
+}
+
+li {
+    font-size: 17px;
+    width: 100px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+li {
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
