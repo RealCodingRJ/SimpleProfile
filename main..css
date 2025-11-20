@@ -7,6 +7,8 @@
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: #101010;
+  color: white;
 }
 
 .container {
@@ -32,12 +34,20 @@ li {
 }
 
 li {
-  display: flex;
+  display: inline;
   padding: 20px;
   text-align: center;
   margin: 0 auto;
+  margin: 20px;
   position: relative;
-  top: 60px;
+  top: calc(75px * 2);
+  /* padding-right: 40px; */
+  color: white;
+}
+
+header {
+  padding: 20px;
+  background-color: #101010;
 }
 
 h2 {
@@ -47,4 +57,35 @@ h2 {
   position: relative;
   top: 450px;
   font-family: sans-serif;
+}
+
+a {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  li {
+    display: inline;
+    padding: 20px;
+    /* max-width: 500px; */
+    position: relative;
+    top: calc(75px * 2);
+    padding-right: 20px;
+    /* background-color: white; */
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  li {
+    padding: 20px;
+    /* max-width: 500px; */
+    display: flex;
+    color: white;
+
+    position: relative;
+    top: calc(75px * 2);
+    padding-right: 40px;
+    background-color: white;
+  }
 }

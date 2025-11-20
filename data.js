@@ -27,14 +27,8 @@ function getData() {
       const ul = document.getElementById("ul");
 
       const apps = app.getIKnow();
-
       for (let i = 0; i < apps.length; i++) {
         const li = document.createElement("li");
-
-        li.style.border = "1px solid #101010";
-        li.style.margin = "0.3rem";
-        li.style.width = `${880 / 2}px`;
-        li.style.textAlign = "center";
 
         if (app.getIKnow()[0] == "React") {
           const date = document.getElementById("date");
@@ -44,6 +38,21 @@ function getData() {
             e.addEventListener("click", () => {
               li.textContent = apps[i];
               li.addEventListener("click", () => {
+                li.style.border = "1px solid #101010";
+                // li.style.margin = "0.8rem";
+                li.style.width = `${880 / 2}px`;
+                li.style.textAlign = "center";
+
+                date.addEventListener("click", () => {
+                  const link = document.querySelectorAll("#projectsId");
+                  // link.style.display = displayNone();
+                  link.forEach((e) => {
+                    e.textContent = "https://github.com/RealCodingRJ";
+                    e.style.display = "block";
+                  });
+                });
+
+                date.textContent = app.getExperience();
                 li.style.backgroundColor = "red";
               });
             });
